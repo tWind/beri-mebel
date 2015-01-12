@@ -1,0 +1,9 @@
+block('top-menu').match(!this._done)(
+    content()(function() {
+        this._done = true;
+        return {
+            block: 'container',
+            content: applyNext()
+        };
+    })
+)
