@@ -1,6 +1,20 @@
-.top-menu
-{
-	width: 100%;
-	height: 100px;
-	background: #000;
+.top-menu {
+	padding: 12px 0 16px;
+
 }
+.top-menu:before, .top-menu:after {
+	content: " ";
+	display: table;
+	box-sizing: border-box;
+	clear: both;
+}
+.top-menu li {
+	float: left;
+	margin-left: 20px;
+}
+.top-menu a {
+	color: #000; font-size: 14px;
+	text-decoration: none;
+}
+.top-menu a:hover { color: #f02c25; }
+.top-menu a:last-child { margin-right: 0;}

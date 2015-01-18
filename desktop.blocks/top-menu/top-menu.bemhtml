@@ -1,9 +1,23 @@
-block('top-menu').match(!this._done)(
-    content()(function() {
-        this._done = true;
-        return {
-            block: 'container',
-            content: applyNext()
-        };
-    })
+block('top-menu')(
+	tag()('ul'),
+	content()(function() {
+    	return (this.ctx.links).map(function(item) {
+    		return [
+    			{
+    				elem: 'item',
+    				content: [
+    					{
+    						tag: 'a',
+    						content: item.title,
+    						attrs: { href: item.src}
+    					}
+    				]
+    			}
+    		]
+    	});
+    }),
+
+	elem('item')(
+		tag()('li')
+	)
 )

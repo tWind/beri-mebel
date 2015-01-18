@@ -1,0 +1,108 @@
+block('goods-category')(
+    tag()('ul'),
+    content()(function() {
+        return (this.ctx.goods).map(function(item) {
+            return [
+                {
+                    elem: 'item',
+                    content: [
+                        
+                        {
+                            elem: 'head',
+                            content: [
+                                {
+                                    tag: 'h4',
+                                    content: item.title
+                                },
+                                {
+                                    tag: 'a',
+                                    content: 'все',
+                                    attrs: { href: '/'}
+                                }
+                            ]
+                        },
+                        {
+                            tag: 'div',
+                            cls: 'inner',
+                            content: [
+                                {
+                                    elem: 'general-link',
+                                    tag: 'a',
+                                    attrs: { href: '/'}
+                                },
+                                {
+                                    tag: 'img',
+                                    attrs: { src: item.image}
+                                },
+                                {
+                                    tag: 'h5',
+                                    content: item.name
+                                },
+                                {
+                                    elem: 'price',
+                                    cls: 'db-tabs',
+                                    content: [
+                                        {
+                                            tag: 'div',
+                                            cls: 'price__left',
+                                            content: [
+                                                {
+                                                    tag: 'p',
+                                                    content: item.price
+                                                }
+                                            ]  
+                                        },
+                                        {
+                                            tag: 'div',
+                                            cls: 'price__right',
+                                            content: [
+                                                {
+                                                    tag: 'a',
+                                                    attrs: { class: 'icon basket white', href: item.buying_link}
+                                                }
+                                            ]                              
+                                        }
+                                    ]
+                                },
+                                {
+                                    tag: 'ul',
+                                    cls: 'sub-category',
+                                    content: [
+                                        {
+                                            tag: 'li',
+                                            content: {
+                                                tag: 'a',
+                                                content: item.sub_link_names[0],
+                                                attrs: { href: item.sub_link_urls }
+                                            }
+                                        },
+                                        {
+                                            tag: 'li',
+                                            content: {
+                                                tag: 'a',
+                                                content: item.sub_link_names[1],
+                                                attrs: { href: item.sub_link_urls }
+                                            }
+                                        },
+                                        {
+                                            tag: 'li',
+                                            content: {
+                                                tag: 'a',
+                                                content: item.sub_link_names[2],
+                                                attrs: { href: item.sub_link_urls }
+                                            }
+                                        }
+                                    ]                      
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        });
+    }),
+
+    elem('item')(
+        tag()('li') 
+    )
+)

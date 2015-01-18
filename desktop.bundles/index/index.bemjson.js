@@ -6,6 +6,7 @@
         { elem: 'meta', attrs: { name: 'description', content: ''}},
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1'}},
         { elem: 'css', url: '/libs/css/reset.css'},
+        { elem: 'css', url: '/libs/css/all.css'},
         { elem: 'css', url: '_index.css'},
         { elem: 'css', attrs: { rel: 'stylesheet/less'},url: '_index.less'}
     ],
@@ -146,7 +147,7 @@
                                             content: [
                                                 {
                                                     tag: 'div',
-                                                    attrs: { class: 'icon basket'}
+                                                    attrs: { class: 'icon basket black'}
                                                 }
                                             ]
                                         },
@@ -185,11 +186,127 @@
                             ]
                         }
                     ]
-                }, // main
+                } // main
+            ]
+        }, // header
+        {
+            tag: 'nav',
+            content: [
                 {
-                    block: 'top-menu'
+                    block: 'container',
+                    content: [
+                        {
+                            block: 'top-menu',
+                            links: [
+                                {
+                                    title: 'Мягкая мебель',
+                                    src: 'link01'
+                                },
+                                {
+                                    title: 'Корпусная мебель',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Столы/стулья',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Матрасы/подушки',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Офисная мебель',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Аксессуары/текстиль',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Другое',
+                                    src: 'link02'
+                                },
+                                {
+                                    title: 'Распродажа',
+                                    src: 'link02'
+                                }
+                            ]
+                        }
+                    ]
+                    
                 }
             ]
+        }, // top nav
+        {
+            block: 'slider',
+            content: [
+                {
+                    block: 'container',
+                    content: [
+                        {
+                            tag: 'img',
+                            attrs: {src: '/img/slider-filler.png'}
+                        }
+                    ]
+                }
+            ]
+        }, // slider
+        {
+            tag: 'section',
+            content: [
+                {
+                    block: 'container',
+                    content: [
+                        {
+                            block: 'justified',
+                            content: [
+                                {
+                                    block: 'goods-category',
+                                    goods: [
+                                        {
+                                            title: 'ГОТОВИМСЯ К ШКОЛЕ',
+                                            image: '/img/images/cat-1.png',
+                                            name: 'Компьютерный стол (СТ-27)',
+                                            price: '9 754 руб.',
+                                            buying_link: '/',
+                                            sub_link_names: [ 'Компьютерные столы и стулья', 'Компьютерные кресла', 'Столы трансформеры'],
+                                            sub_link_urls: [ 'href1', 'href2', 'href' ]
+                                        },
+                                        {
+                                            title: 'ваш здоровый сон',
+                                            image: '/img/images/cat-1.png',
+                                            name: 'Матрас Breeze (Бриз)',
+                                            price: '9 754 руб.',
+                                            buying_link: '/',
+                                            sub_link_names: [ 'Аксессуары для сна', 'Матрасы', 'Подушки'],
+                                            sub_link_urls: [ 'href1', 'href2', 'href' ]
+                                        },
+                                        {
+                                            title: 'стол для всей семьи',
+                                            image: '/img/images/cat-1.png',
+                                            name: 'Компьютерный стол (СТ-27)',
+                                            price: '9 754 руб.',
+                                            buying_link: '/',
+                                            sub_link_names: [ 'Компьютерные столы и стулья', 'Компьютерные кресла', 'Столы трансформеры'],
+                                            sub_link_urls: [ 'href1', 'href2', 'href' ]
+                                        },
+                                        {
+                                            title: 'РАСПРОДАЖА мебели',
+                                            image: '/img/images/cat-1.png',
+                                            name: 'Компьютерный стол (СТ-27)',
+                                            price: '9 754 руб.',
+                                            buying_link: '/',
+                                            sub_link_names: [ 'Компьютерные столы и стулья', 'Компьютерные кресла', 'Столы трансформеры'],
+                                            sub_link_urls: [ 'href1', 'href2', 'href' ]
+                                        }
+                                    ]
+                                } // goods category
+                            ]
+                        }
+                        
+                    ]
+                }
+            ] 
         }
     ]
 })
