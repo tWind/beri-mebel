@@ -1,0 +1,22 @@
+block('vertical-menu')(
+	tag()('ul'),
+	content()(function() {
+		return (this.ctx.links || [this.ctx.link]).map(function(link) {
+			return [
+				{
+					elem: 'item',
+					content: [
+						{
+							tag: 'a',
+							content: link.name,
+							attrs: { href: link.href}
+						}
+					]
+				}
+			]
+		})
+	}),
+	elem('item')(
+		tag()('li')
+	)
+)

@@ -307,6 +307,74 @@
                     ]
                 }
             ] 
+        },
+        {
+            tag: 'footer',
+            content: [
+                {
+                    block: 'container',
+                    content: [
+                        {
+                            block: 'bar-code',
+                            content: [
+                                {
+                                    tag: 'img',
+                                    attrs: { src: '/img/images/bar-code.png'}
+                                }
+                            ]
+                        },
+                        {
+                            block: 'vertical-menu',
+                            cls: 'main',
+                            links: [
+                                { name: [ 'Главная' ], href: [ '/' ] },
+                                { name: [ 'Контакты' ], href: [ '/' ] },
+                                { name: [ 'Акции и подарки' ], href: ['/' ] },
+                                { name: [ 'Как купить' ], href: [ '/' ] },
+                                { name: [ 'Доставка' ], href: [ '/' ] }
+                            ]
+                        },
+                        {
+                            block: 'vertical-menu',
+                            cls: 'services',
+                            links: [
+                                { name: [ 'Занос в помещения и подъём' ], href: [ '/' ] },
+                                { name: [ 'Сборка и установка' ], href: [ '/' ] },
+                                { name: [ 'Оплата' ], href: ['/' ] },
+                                { name: [ 'Оплата наличными средствами' ], href: [ '/' ] },
+                                { name: [ 'Оплата безналичными средствами' ], href: [ '/' ] }
+                            ]
+                        },
+                        {
+                            block: 'vertical-menu',
+                            cls: 'info',
+                            links: [
+                                { name: [ 'Кредит' ], href: [ '/' ] },
+                                { name: [ 'Электронные деньги' ], href: [ '/' ] },
+                                { name: [ 'FAQ' ], href: ['/' ] },
+                                { name: [ 'Полезно' ], href: [ '/' ] },
+                                { name: [ 'О нас' ], href: [ '/' ] }
+                            ]
+                        },
+                        {
+                            block: 'parthners',
+                            content: [
+                                { tag: 'h4', content: 'Наши партнеры' },
+                                { tag: 'a', content: 'мебельвкубе.рф', attrs: { href: '/'} },
+                                { tag: 'a', content: 'elitemebelshop.ru', attrs: { href: '/'} }
+                            ]
+                        },
+                        {
+                            block: 'social',
+                            content: [ 
+                                { tag: 'div', cls: 'icon vk' },
+                                { tag: 'div', cls: 'icon fbk' },
+                                { tag: 'div', cls: 'icon tw' }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 })

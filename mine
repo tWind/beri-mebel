@@ -1,0 +1,65 @@
+{
+                                    elem: 'item',
+                                    content: [
+                                        {
+                                            tag: 'h4',
+                                            content: 'ГОТОВИМСЯ К ШКОЛЕ'
+                                        },
+                                        {
+                                            tag: 'img',
+                                            attrs: {src: '/img/images/cat-1.png'}
+                                        },
+                                        {
+                                            tag: 'h5',
+                                            content: 'Компьютерный стол (СТ-27)'
+                                        },
+                                        {
+                                            elem: 'price',
+                                            content: [
+                                                {
+                                                    tag: 'p',
+                                                    content: '9 754 руб.'
+                                                },
+                                                {
+                                                    tag: 'a',
+                                                    attrs: { class: 'icon basket white', href: '/'}
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            tag: 'ul',
+                                            content: [
+                                                {
+                                                    tag: 'li',
+                                                    content: [
+                                                        {
+                                                            tag: 'a',
+                                                            attrs: { href: '/'},
+                                                            content: 'Компьютерные столы и стулья'
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    tag: 'li',
+                                                    content: [
+                                                        {
+                                                            tag: 'a',
+                                                            attrs: { href: '/'},
+                                                            content: 'Компьютерные кресла'
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    tag: 'li',
+                                                    content: [
+                                                        {
+                                                            tag: 'a',
+                                                            attrs: { href: '/'},
+                                                            content: 'Столы трансформеры'
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
