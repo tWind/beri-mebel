@@ -1,0 +1,40 @@
+block('news-list')(
+	tag()('ul'),
+	content()(function() {
+		return this.ctx.news.map(function(item) {
+			return [
+				{
+					elem: 'item',
+					content: [
+						{
+							tag: 'h5',
+							content: item.date
+						},
+						{
+							tag: 'h6',
+							content: [
+								{
+									tag: 'a',
+									attrs: { href: item.href },
+									content: item.title
+								}
+							]
+						},
+						{
+							elem: 'text',
+							content: item.text
+								
+						}
+					]
+				}
+			]
+		})
+	}),
+	elem('item')(
+		tag()('li')
+	),
+	elem('text')(
+		tag()('p')
+	)
+	
+)

@@ -1,0 +1,21 @@
+.news-list
+{
+}
+.news-list__item {
+	width: 204px;
+}
+.news-list h5 {
+	display: inline-block;
+	font-size: 12px; font-weight: bold; color: #FFF;
+	padding: 1px 2px; margin-bottom: 3px;
+	background: #484848;
+	border-radius: 3px;
+}
+h6 { margin-bottom: 7px;}
+.news-list a {
+	font-size: 12px; color: #323030; font-weight: bold;
+}
+.news-list__text {
+	font-size: 12px; color: #323030;
+	line-height: 15px;
+}
