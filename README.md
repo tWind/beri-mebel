@@ -15,3 +15,4 @@ links: [
 		href: [ '_href1', '_href2', '_href3', '...' ]
 	}
 ]
+3. Wrap all section inner blocks with 'container' blocks using bemhtml

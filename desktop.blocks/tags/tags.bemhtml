@@ -1,0 +1,19 @@
+block('tags')(
+	content()( function() {
+		return [
+			{
+				tag: 'h4',
+				content: '1'
+			}
+		],
+			(this.ctx.title).map(function(item){
+				return { elem: 'link', content: item, attrs: { href: '/'} } 
+		})
+	}),
+	elem('link')(
+		tag()('a'),
+		content()(function() {
+			return applyNext()
+		})
+	)
+)
