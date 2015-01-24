@@ -1,12 +1,6 @@
 block('tags')(
 	content()( function() {
-		return [
-			{
-				tag: 'h4',
-				content: '1'
-			}
-		],
-			(this.ctx.title).map(function(item){
+		return (this.ctx.title).map(function(item){
 				return { elem: 'link', content: item, attrs: { href: '/'} } 
 		})
 	}),
