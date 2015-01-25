@@ -6,6 +6,7 @@
         { elem: 'meta', attrs: { name: 'description', content: ''}},
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1'}},
         { elem: 'css', url: '/libs/css/reset.css'},
+        //{ elem: 'css', url: '/libs/css/jquery.bxslider.css'},
         { elem: 'css', url: '/libs/css/all.css'},
         { elem: 'css', url: '_index.css'},
         { elem: 'css', attrs: { rel: 'stylesheet/less'},url: '_index.less'}
@@ -13,7 +14,8 @@
     scripts: [
         { elem: 'js', url: '/libs/js/jquery.js'},
         { elem: 'js', url: '/libs/js/less.js'},
-        { elem: 'js', url: '_index.js'}
+        { elem: 'js', url: '_index.js'},
+        { elem: 'js', url: '/libs/js/jquery.bxslider.min.js'}
     ],
     content: [
         { 
@@ -238,19 +240,43 @@
             ]
         }, // top nav
         {
-            block: 'slider',
+            tag: 'section',
+            cls: 'slider',
             content: [
                 {
                     block: 'container',
                     content: [
                         {
-                            tag: 'img',
-                            attrs: {src: '/img/slider-filler.png'}
+                            block: 'carousel',
+                            tag: 'ul',
+                            content: [
+                                {
+                                    tag: 'li',
+                                    content: {
+                                        tag: 'img',
+                                        attrs: {src: '/img//slider/img01.png'}
+                                    }
+                                },
+                                {
+                                    tag: 'li',
+                                    content: {
+                                        tag: 'img',
+                                        attrs: {src: '/img//slider/img01.png'}
+                                    }
+                                },
+                                {
+                                    tag: 'li',
+                                    content: {
+                                        tag: 'img',
+                                        attrs: {src: '/img//slider/img01.png'}
+                                    }
+                                }
+                            ]
                         }
                     ]
-                }
+                }, // slider
             ]
-        }, // slider
+        },
         {
             tag: 'section',
             content: [
