@@ -346,7 +346,10 @@
                                 {
                                     tag: 'h4',
                                     cls: 'red',
-                                    content: 'НОВОСТИ КОМПАНИИ'
+                                    content: [
+                                        'НОВОСТИ КОМПАНИИ',
+                                        { tag: 'a', attrs: { href: '/'}, content: 'все новости'}
+                                    ]
                                 },
                                 {
                                     block: 'news-list',
